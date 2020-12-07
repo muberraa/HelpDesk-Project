@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% load static %} 
+
+{% block content %}
+
+
+<table class="table table-borderless">
+    <thead class="border-bottom font-weight-bold" >
+        <tr>
+            <th>Konu</th>
+            <th>Departman</th>
+            <th>Öncelik</th>
+            <th>İçerik</th>
+            <th>Durum</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for talepler in Taleplerim %}
+        <tr>
+
+            
+            <td>{{ talepler.konu }}</td>
+            <td>{{ talepler.departman }}</td>
+            <td>{{ talepler.oncelik }}</td>
+            <td>{{ talepler.icerik }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+
+{% endblock %}
